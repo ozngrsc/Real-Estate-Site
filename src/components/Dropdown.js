@@ -16,8 +16,8 @@ const DropdownContainer = styled.div`
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: 1;
-  top: 0;
+  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 
 const Icon = styled.div`
@@ -42,6 +42,10 @@ const DropdownMenu = styled.div`
   grid-template-rows: repeat(4, 80px);
   text-align: center;
   margin-bottom: 4rem;
+
+  @media screen and (max-width: 480px) {
+    grid-template-rows: repeat(4, 60px);
+  }
 `;
 
 const DropdownLink = styled(Link)`
@@ -61,12 +65,15 @@ const DropdownLink = styled(Link)`
   }
 `;
 
-const BtnWrap = styled.div``;
+const BtnWrap = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
-const Dropdown = () => {
+const Dropdown = ({ isOpen, toggle }) => {
   return (
-    <DropdownContainer>
-      <Icon>
+    <DropdownContainer isOpen={isOpen} onClick={toggle}>
+      <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
       <DropdownWrapper>
