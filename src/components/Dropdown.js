@@ -30,10 +30,37 @@ const Icon = styled.div`
   outline: none;
 `;
 
-const CloseIcon = styled(FaTimes)``;
+const CloseIcon = styled(FaTimes)`
+  color: #000d1a;
+`;
+
 const DropdownWrapper = styled.div``;
-const DropdownMenu = styled.div``;
-const DropdownLink = styled(Link)``;
+
+const DropdownMenu = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 80px);
+  text-align: center;
+  margin-bottom: 4rem;
+`;
+
+const DropdownLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: #000d1a;
+  }
+`;
+
 const BtnWrap = styled.div``;
 
 const Dropdown = () => {
@@ -44,11 +71,11 @@ const Dropdown = () => {
       </Icon>
       <DropdownWrapper>
         <DropdownMenu>
-          {menuData.map((item, index) => {
+          {menuData.map((item, index) => (
             <DropdownLink to={item.link} key={index}>
               {item.title}
-            </DropdownLink>;
-          })}
+            </DropdownLink>
+          ))}
         </DropdownMenu>
         <BtnWrap>
           <Button primary="true" round="true" big="true" to="/contact">
