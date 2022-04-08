@@ -6,6 +6,8 @@ import { SliderData } from "./data/SliderData";
 import Dropdown from "./components/Dropdown";
 import InfoSection from "./components/InfoSection";
 import InteriorSection from "./components/InteriorSection";
+import ModernDesign from "./components/ModernDesignSection";
+import Footer from "./components/Footer";
 import NewHomes from "./components/NewHomes";
 import {
   InfoData,
@@ -31,6 +33,8 @@ function App() {
       <InfoSection {...InfoData} />
       <NewHomes {...InfoDataThree} />
       <InteriorSection {...InfoDataFour} />
+      <ModernDesign {...InfoDataTwo} />
+      <Footer {...InfoDataFive} />
     </>
   );
 }
