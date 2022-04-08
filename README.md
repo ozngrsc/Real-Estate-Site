@@ -7,15 +7,16 @@ Click demo to try it by yourself!
 ## Real-Estate-Site Demo Link
 
 You can view the site here
-[Click Me]()
+[Click Me](https://real-estate-site-ozngrsc.web.app)
 
 ## Topics
 
 - ReactJS
 - JavaScript
-- Html
-- Css
+- Styled Component
+- React Icons
 - Responsive Design
+- Deploy the App Live on Firebase
 
 
 
