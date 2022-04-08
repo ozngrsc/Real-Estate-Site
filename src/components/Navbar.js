@@ -74,7 +74,7 @@ const NavBtn = styled.div`
 const Navbar = ({ toggle }) => {
   return (
     <Nav>
-      <Logo to="/">ELIXR</Logo>
+      <Logo to="/">OZNGRSC</Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
