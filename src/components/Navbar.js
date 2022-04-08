@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
 import { menuData } from "../data/MenuData";
@@ -13,6 +13,11 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
+
+  background: transparent;
+  &&.active {
+    background: #cd853f;
+  }
 `;
 
 const NavLink = css`
@@ -72,8 +77,20 @@ const NavBtn = styled.div`
 `;
 
 const Navbar = ({ toggle }) => {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 600) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   return (
-    <Nav>
+    <Nav className={navbar ? "Nav active" : "Nav"}>
       <Logo to="/">OZNGRSC</Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
