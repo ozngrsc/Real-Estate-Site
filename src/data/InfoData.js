@@ -53,11 +53,11 @@ export const InfoDataFour = {
 
 export const InfoDataFive = {
   heading: "Let's Find Your Dream Home",
-  link1: "//www.facebook.com/oskee3/",
-  link2: "//www.instagram.com/ozgeecsknnn/",
+  link1: "https://www.facebook.com/ozan.gursucu",
+  link2: "https://www.instagram.com/ozngrsc/",
   link3: "https://www.youtube.com/channel/UCzyN347vE-6itnsbIo0pF-g",
-  link4: "//twitter.com/oskee3",
-  link5: "//www.linkedin.com/in/%C3%B6zge-co%C5%9Fkun-g%C3%BCrsucu-28380987/",
+  link4: "https://twitter.com/OznGrsc_",
+  link5: "https://www.linkedin.com/in/ozan-g%C3%BCrsucu-82ba20b5/",
   reverse: false,
   delay: 100,
 };
